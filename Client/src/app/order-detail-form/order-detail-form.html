@@ -1,0 +1,53 @@
+
+<form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Save Status</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        Save Success
+      </div>
+      <div class="modal-footer d-flex align-items-center justify-content-center">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal"   (click)="navigateToListOrder()">Next</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+  <div class="mb-3">
+    <label>orderNumber</label>
+    <input class="form-control form-control-lg"  formControlName="orderNumber" >
+  </div>
+  <div class="mb-3">
+    <label>titleOfBook</label>
+   <input class="form-control form-control-lg"  formControlName="titleOfBook" >
+  </div>
+
+  <div class="row">
+    <div class="mb-3 col-6">
+      <label>price</label>
+     <input class="form-control form-control-lg"  formControlName="price" >
+    </div>
+    <div class="mb-3 col-6">
+      <label>store</label>
+      <input class="form-control form-control-lg"  formControlName="store" >
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col-6">
+      <label>total Paid</label>
+     <input class="form-control form-control-lg"  formControlName="totalPaid" >
+    </div>
+    
+  </div>
+  <div class="d-grid">
+    <button class="btn btn-lg btn-success" data-bs-toggle="modal"  type="submit "  data-bs-target="#exampleModal">
+      Submit
+    </button>
+  </div>
+
+</form>

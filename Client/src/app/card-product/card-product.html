@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem;">
+  
+  <img src="https://media.istockphoto.com/id/173015527/photo/a-single-red-book-on-a-white-surface.jpg?s=612x612&w=0&k=20&c=AeKmdZvg2_bRY2Yct7odWhZXav8CgDtLMc_5_pjSItY=" class="card-img-top" alt="...">
+  <div class="card-body">
+ 
+  <h5 class="card-title">{{books.name}}</h5>
+  
+    <p class="card-text"> author: {{books.author}}</p>
+     <p class="card-text">price : {{books.price}} $</p>
+      <p>
+        data : {{ books.date}}
+      </p>
+      <p>
+       store: {{ books.store}}
+      </p>
+    <!-- <a routerLink="/create/order"  class="btn btn-primary">checkout</a> -->
+
+    <a [routerLink]="['/create/order']" [state]="{titleOfBook: books.name , price:books.price ,  store:books.store }" class="btn btn-danger">
+   buy now
+</a>
+  </div>
+</div>
