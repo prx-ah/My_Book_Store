@@ -1,0 +1,23 @@
+● src
++---● app
+|   |  
+|   | 
+|   +--● card-product
+|   |  |--card-product.ts|.html
+|   |
+|   +--● catalog-product
+|   |  |--catalog-product.ts|.html  
+|   |
+|   +--● order-detail-form
+|   |  |--order-detail-form.ts|.html 
+|   |
+|   +--● order-list
+|   |  |--order-list.ts|.html 
+|   |
+|   +--● shared
+|   |  |--order.service.ts
+|   |  |--order-detail.model.ts
+|   |
+|   |--app.module.ts
+|
+|--index.html (cdn path for bootstrap)

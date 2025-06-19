@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterModule, RouterOutlet } from '@angular/router';
+// import 'zone.js'
 
 @Component({
   selector: 'app-card-product',
@@ -8,7 +9,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './card-product.html',
   styleUrl: './card-product.css'
 })
-export class CardProduct {
+export class CardProduct implements OnInit{
+
   @Input() books: any ;
  ngOnInit(){
   console.log("books-->",this.books)

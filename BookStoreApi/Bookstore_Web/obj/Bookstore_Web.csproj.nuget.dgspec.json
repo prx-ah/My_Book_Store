@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peerawat_k\\Desktop\\Book_store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj": {}
+    "C:\\Users\\peerawat_k\\Desktop\\Book\\My_Book_Store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peerawat_k\\Desktop\\Book_store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj": {
+    "C:\\Users\\peerawat_k\\Desktop\\Book\\My_Book_Store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peerawat_k\\Desktop\\Book_store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj",
+        "projectUniqueName": "C:\\Users\\peerawat_k\\Desktop\\Book\\My_Book_Store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj",
         "projectName": "Bookstore_Web",
-        "projectPath": "C:\\Users\\peerawat_k\\Desktop\\Book_store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj",
+        "projectPath": "C:\\Users\\peerawat_k\\Desktop\\Book\\My_Book_Store\\BookStoreApi\\Bookstore_Web\\Bookstore_Web.csproj",
         "packagesPath": "C:\\Users\\peerawat_k\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peerawat_k\\Desktop\\Book_store\\BookStoreApi\\Bookstore_Web\\obj\\",
+        "outputPath": "C:\\Users\\peerawat_k\\Desktop\\Book\\My_Book_Store\\BookStoreApi\\Bookstore_Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

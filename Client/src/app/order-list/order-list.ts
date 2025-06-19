@@ -16,7 +16,7 @@ import { ActivatedRoute } from '@angular/router';
   providers:[OrderService],
   styleUrl: './order-list.css'
 })
-export class OrderList  {
+export class OrderList  implements OnInit {
 
  constructor(
        public sv :OrderService,
@@ -35,12 +35,6 @@ export class OrderList  {
 
   ngOnInit()  {
     console.log("start")
-    // this.list = [{"orderNumber":"001","titleOfBook":"Harry potter","price":200,"store":"peter","totalPaid":200}]
-    // console.log(this.list);
-    // this.sv.refreshList().subscribe((res:any)=>{
-    //   console.log("res-->",res);
-    //   this.list = res
-    // }).
 
      this.route.data.subscribe({
         next : (data:any) => {
@@ -48,10 +42,6 @@ export class OrderList  {
          const order = data.data ;
          this.list = order
          
-        //  this.profileForm.value.titleOfBook =book.titleOfBook || " " ;
-        //  this.profileForm.value.price = book.price ;
-        //  this.profileForm.value.store =book.store ;
-
          
       },
       error: (error) => {
@@ -62,41 +52,6 @@ export class OrderList  {
     console.log("here data from service",this.sv.list)
   }
 
-     refreshList() {
-    this.http.get(this.url)
-      .subscribe({
-        next: res => {
-         
-          this.list = res as OrderDetail[]
-          console.log("here is my list -->",this.list) 
-          
-        },
-        error: err => { console.log(err) }
-      })
-  }
-
-  postPaymentDetail() {
-    return this.http.post(this.url, this.formData)
-  }
-
-  putPaymentDetail() {
-    return this.http.put(this.url + '/' + this.formData.orderNumber, this.formData)
-  }
-
-
-  deletePaymentDetail(id: any) {
-    return this.http.delete(this.url + '/' + id)
-  }
-
-
-  resetForm(form: NgForm) {
-    form.form.reset()
-    this.formData = new OrderDetail()
-    this.formSubmitted = false
-  }
-  refesh(){
-    location.reload();
-  }
 
 
   onDelete(id: any) {

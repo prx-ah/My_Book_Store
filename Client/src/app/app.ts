@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet ,ActivatedRoute} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CatalogProduct} from './catalog-product/catalog-product'
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports : [
     RouterModule,
-    RouterOutlet
+    RouterOutlet,
+  
+   
 ],
   templateUrl: './app.html',
   styleUrl: './app.css'

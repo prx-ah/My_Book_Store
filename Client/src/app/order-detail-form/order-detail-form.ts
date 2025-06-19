@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { PaymentDetailService } from 'src/app/shared/payment-detail.service';
 import { FormBuilder, NgForm, NgModel } from "@angular/forms";
 // import { PaymentDetail } from 'src/app/shared/payment-detail.model';
@@ -15,25 +15,26 @@ import { ActivatedRoute, Route, Router, RouterLink } from '@angular/router';
   templateUrl:  './order-detail-form.html',
   styleUrl: './order-detail-form.css'
 })
-export class OrderDetailForm {
+export class OrderDetailForm implements OnInit{
 
   orderForm: any ;
 
  
-constructor(public  service :  OrderService ,public route : ActivatedRoute , public fb :FormBuilder ,private router: Router ) {
+constructor(
+  public  service :  OrderService ,
+  public  route :    ActivatedRoute ,
+  public  fb :       FormBuilder ,
+  private router:    Router ) {
   }
 
   ngOnInit(){
-    // Get NavigationStart events
  
     this.route.data.subscribe({
         next : (data:any) => {
          console.log(data.data)
          var book = data.data.extra
             this.createFrom(book);
-        //  this.profileForm.value.titleOfBook =book.titleOfBook || " " ;
-        //  this.profileForm.value.price = book.price ;
-        //  this.profileForm.value.store =book.store ;
+  
 
          console.log(this.orderForm.value)
       },
@@ -45,14 +46,13 @@ constructor(public  service :  OrderService ,public route : ActivatedRoute , pub
 
 
   createFrom(book :any){
-    var ordernum = this.generateOrderNum();
+    var orderNum = this.generateOrderNum();
     this.orderForm = this.fb.group({
-    orderNumber: [ordernum],
+    orderNumber: [orderNum],
     titleOfBook: [book.titleOfBook],
     price:  [book.price],
     store:[book.store],
     totalPaid :[book.price+book.price*0.07]
-
         
       });
 
